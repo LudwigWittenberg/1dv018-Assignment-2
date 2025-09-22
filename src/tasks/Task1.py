@@ -1,4 +1,3 @@
-import numbers
 from src.utils.LinkedList.LinkedList import LinkedList
 from src.utils.GetRadomNumbers import get_random_number
 
