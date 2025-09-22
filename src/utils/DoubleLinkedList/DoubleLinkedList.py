@@ -51,3 +51,20 @@ class DoubleLinkedList:
     
     # If head and tail are not the same
     return False
+  
+  def size(self):
+    return self.cnt
+  
+  def is_empty(self):
+    return self.cnt == 0 and self.head is None and self.tail is None
+  
+  def __iter__(self):
+    return self
+  
+  def __next__(self):
+    if self.head is None:
+      raise StopIteration
+    else:
+      current = self.head
+      self.head = self.head.nxt
+      return current.value
