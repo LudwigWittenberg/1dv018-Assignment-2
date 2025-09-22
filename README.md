@@ -34,3 +34,9 @@ Båda strukturerna har sina för- och nackdelar. I praktiken vet vi ofta ungefä
 Den största nackdelen med länkade listor är att det tar längre tid att hitta ett element, eftersom man måste iterera genom listan. I en ArrayList kan vi däremot direkt komma åt ett element via dess index, vilket ger så kallad *instant access*. Men vet vi att vi ofta kommer att iterera genom hela listan, till exempel för att skriva ut alla element, är skillnaden i söktid inte lika stor.
 
 En annan styrka hos länkade listor är insättningar och borttagningar: när vi väl är på rätt plats behöver vi bara ändra pekarna för två element. I en ArrayList måste däremot alla efterföljande element flyttas, vilket gör operationen långsammare. Samtidigt hur ofta lägger vi egentligen till eller tar bort element i mitten av en lista i praktiken?
+
+## Test Uppgift 2
+
+Alla test går igenom utan problem. Vi testar både `size` och `is_empty` metoderna i vår `Task2.py` fil. Samt kastar vi undantag när vi försöker ta bort element från en tom lista.
+
+Vill du se koden för testerna så finns den i `/test/Test_Task2.py`.

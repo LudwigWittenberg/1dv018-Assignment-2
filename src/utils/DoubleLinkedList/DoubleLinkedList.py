@@ -27,21 +27,25 @@ class DoubleLinkedList:
       self.tail.nxt = new_node
       new_node.prv = self.tail
       self.tail = new_node
-      
+
   def remove_first(self):
-    if self.head is not None:
-      self.cnt -= 1
-      if not self._is_head_tail_same():
-        self.head.nxt.prev = None
-        self.head = self.head.nxt
+    if self.head is None:
+      raise Exception("List is empty")
+    
+    self.cnt -= 1
+    if not self._is_head_tail_same():
+      self.head.nxt.prev = None
+      self.head = self.head.nxt
         
   def remove_last(self):
-    if self.tail is not None:
-      self.cnt -= 1
+    if self.tail is None:
+      raise Exception("List is empty")
       
-      if not self._is_head_tail_same():
-        self.tail.prv.nxt = None
-        self.tail = self.tail.prv
+    self.cnt -= 1
+    
+    if not self._is_head_tail_same():
+      self.tail.prv.nxt = None
+      self.tail = self.tail.prv
         
   def _is_head_tail_same(self):
     if self.head == self.tail:
