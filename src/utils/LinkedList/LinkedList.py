@@ -4,16 +4,16 @@ class LinkedList:
   def __init__(self):
     self.head = None
     self.cnt = 0
-    self.last = None
+    self.tail = None
     
   def append(self, value):
     self.cnt += 1
     if self.head is None:
       self.head = DLList(value)
-      self.last = self.head
+      self.tail = self.head
     else:
-      self.last.nxt = DLList(value)
-      self.last = self.last.nxt
+      self.tail.nxt = DLList(value)
+      self.tail = self.tail.nxt
 
   def get_count(self):
     return self.cnt
