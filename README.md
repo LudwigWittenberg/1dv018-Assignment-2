@@ -40,3 +40,9 @@ En annan styrka hos länkade listor är insättningar och borttagningar: när vi
 Alla test går igenom utan problem. Vi testar både `size` och `is_empty` metoderna i vår `Task2.py` fil. Samt kastar vi undantag när vi försöker ta bort element från en tom lista.
 
 Vill du se koden för testerna så finns den i `/test/Test_Task2.py`.
+
+## Uppgift 3 - Binärt sökträd
+
+Metoden för att radera de `k` element heter `special_operation`. Den tar in ett värde på `k` och raderar de `k` största elementen i trädet.
+Om `k` är större än antalet element i trädet kastas ett undantag.
+Vi går igenom trädet med hjälp utav `in_order` metoden som returnerar en sorterad lista med alla element i trädet. Vi tar sedan de sista `k` elementen i listan och raderar dem med hjälp av `remove` metoden.
