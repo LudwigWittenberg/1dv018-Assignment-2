@@ -3,9 +3,11 @@ from src.utils.BinarySearchTree.BNode import BNode
 class BinarySearchTree:
   def __init__(self):
     self.root = None
+    self.cnt = 0
 
   def add(self, key):
-     self.root = self._add(self.root, key)
+    self.root = self._add(self.root, key)
+    self.cnt += 1
      
   def _add(self, node, key):
     if node is None:
@@ -20,6 +22,7 @@ class BinarySearchTree:
   
   def remove(self, key):
     self.root = self._remove(self.root, key)
+    self.cnt -= 1
     
   def _remove(self, node, key):
     if node is None:
@@ -46,3 +49,58 @@ class BinarySearchTree:
       return node
     else:
       return self._get_min(node.left)
+    
+  def height(self):
+    return self._height(self.root)
+  
+  def _height(self, node):
+    if node is None:
+      return -1
+    else:
+      left_height = self._height(node.left)
+      right_height = self._height(node.right)
+      return 1 + max(left_height, right_height)
+    
+  def size(self):
+    return self.cnt
+  
+  def __contains__(self, key):
+    return self._contains(self.root, key)
+  
+  def _contains(self, node, key):
+    if node is None:
+      return False
+
+    if node.value > key:
+      return self._contains(node.left, key)
+    elif node.value < key:
+      return self._contains(node.right, key)
+    else:
+      return True
+    
+  def in_order(self, node):
+    if node is None:
+      return ''
+    else:
+      s = self.in_order(node.left)
+      s += f' {node.value} '
+      s += self.in_order(node.right)
+      return s
+    
+  def pre_order(self, node):
+    if node is None:
+      return ''
+    else:
+      s = f' {node.value} '
+      s += self.pre_order(node.left)
+      s += self.pre_order(node.right)
+      return s
+    
+  def post_order(self, node):
+    if node is None:
+      return ''
+    else:
+      s = self.post_order(node.left)
+      s += self.post_order(node.right)
+      s += f' {node.value} '
+      return s
