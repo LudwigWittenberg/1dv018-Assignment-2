@@ -104,3 +104,15 @@ class BinarySearchTree:
       s += self.post_order(node.right)
       s += f' {node.value} '
       return s
+    
+  def special_operation(self, k:int):
+    if self.cnt < k or k <= 0:
+      raise ValueError("k must be between 1 and the number of nodes in the tree")
+    
+    in_order_list = self.in_order(self.root).split()
+    
+    remove_index = self.size() - k
+
+    value_to_remove = int(in_order_list[remove_index])
+
+    self.remove(value_to_remove)
