@@ -2,6 +2,7 @@ from src.tasks.Task1 import Task1
 from src.tasks.Task2 import Task2
 from src.test.Test_Task2 import Test_Task2
 from src.tasks.Task3 import Task3
+from src.tasks.Task4 import Task4
 
 def main():
   # print("--------------- Task 1 ---------------")
@@ -13,7 +14,10 @@ def main():
   # # Implement Tests for Task2
   # Test_Task2()
   
-  print("--------------- Task 3 ---------------")
-  Task3()
+  # print("--------------- Task 3 ---------------")
+  # Task3()
+  
+  print("--------------- Task 4 ---------------")
+  Task4()
   
 main()
