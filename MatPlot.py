@@ -5,7 +5,7 @@ from collections import Counter
 import matplotlib.pyplot as plt
 
 def GenerateGraphs():
-  random_int = random.randint(10_000, 100_000)
+  random_int = 1_000_000
   vehicles = [Vehicle() for _ in range(random_int)]
   
   num_of_buckets = random_int // 5
