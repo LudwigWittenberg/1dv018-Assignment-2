@@ -6,11 +6,13 @@ def Task4():
   ht = HTSC()
   
   values = ["Ludwig", "Samuel", "Jonathan", "Benjamin", "Lucas"]
+  print("Creating hash table and inserting values:", values)
   
   for value in values:
     ht.insert(value)
     
   print("Hash Table Size:", len(ht))
+  print("Does the hash table contain 'Ludwig'?", ht.find("Ludwig"))
   print()
   
   print("Task4: Testing with 200 random numbers")

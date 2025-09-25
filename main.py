@@ -6,22 +6,26 @@ from src.tasks.Task4 import Task4
 from src.tasks.Task5 import Task5
 
 def main():
-  # print("--------------- Task 1 ---------------")
-  # Task1()
-  # print("")
+  print("--------------- Task 1 ---------------")
+  Task1()
+  print("")
   
-  # print("--------------- Task 2 ---------------")
-  # Task2()
-  # # Implement Tests for Task2
-  # Test_Task2()
+  print("--------------- Task 2 ---------------")
+  Task2()
+  # Implement Tests for Task2
+  Test_Task2()
+  print("")
   
-  # print("--------------- Task 3 ---------------")
-  # Task3()
+  print("--------------- Task 3 ---------------")
+  Task3()
+  print("")
   
-  # print("--------------- Task 4 ---------------")
-  # Task4()
+  print("--------------- Task 4 ---------------")
+  Task4()
+  print("")
   
   print("--------------- Task 5 ---------------")
   Task5()
+  print("")
   
 main()
