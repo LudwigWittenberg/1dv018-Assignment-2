@@ -15,5 +15,5 @@ def Task5():
   for v in vehicles:
     hash_table.insert(v)
     
-  print("Number of vehicles: ", {len(vehicles)})
-  print("Number of vehicles in hash table: ", {len(hash_table)})
+  print("Number of vehicles: ", len(vehicles))
+  print("Number of vehicles in hash table: ", len(hash_table))

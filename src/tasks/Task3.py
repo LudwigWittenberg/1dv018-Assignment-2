@@ -36,7 +36,7 @@ def Task3():
       random_index = get_random_number(len(in_order_list) - 1)
       number_to_remove = in_order_list[random_index]
       
-      print("Random index: ",{random_index}, "List length: ",{len(in_order_list)})
+      print("Random index: ",{random_index}, "List length: ", len(in_order_list))
       print("Removing", number_to_remove)
       
       bst.remove(number_to_remove)
