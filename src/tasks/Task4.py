@@ -16,7 +16,7 @@ def Task4():
   print("Task4: Testing with 200 random numbers")
   ht2 = HTSC()
 
-  for index in range(200):
+  for _ in range(200):
     value = random.randint(1, 100_000)
     ht2.insert(value)
 
