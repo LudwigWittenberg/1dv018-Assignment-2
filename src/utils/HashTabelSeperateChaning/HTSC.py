@@ -46,3 +46,16 @@ class HTSC:
       node = node.nxt
     
     return count
+
+  def count_conflicts(self):
+    each_conflict = []
+    
+    for col in self.table:
+      count = 0
+      
+      if col is not None and col.nxt is not None:
+        count += self._count_chain(col) - 1
+      
+      each_conflict.append(count)
+        
+    return each_conflict

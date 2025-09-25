@@ -15,4 +15,11 @@ class Vehicle:
     for _ in range(2):
       self.reg_number += random.choice(digits)
     for _ in range(1):
-      self.reg_number += random.choice(letters)    
+      self.reg_number += random.choice(letters)
+      
+  def __hash__(self):
+    hv = 17
+    
+    hv = 31 * hv + hash(self.reg_number)
+    
+    return hv
