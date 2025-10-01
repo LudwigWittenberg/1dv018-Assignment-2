@@ -21,10 +21,14 @@ def Task1():
   for _ in range(amount_of_numbers):
     linked_list.append(get_random_number(100))
   
-  print_linked_list(linked_list)
-
-  print("Current linked list count:", linked_list.get_count())
+  print_linked_list(linked_list) 
   
+  print("Removing the third element from the start of the linked list")
+  print(linked_list.head.nxt.nxt.value)
+  linked_list.pop(linked_list.head.nxt.nxt.value)
+  
+  print_linked_list(linked_list)
+  print("Current linked list count:", len(linked_list))
   
 def print_linked_list(linked_list):
   current = linked_list.head
